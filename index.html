@@ -1,539 +1,1283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Pihu 🎀</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Happy Birthday Pihu Ji 💐</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #fff0f6;
-      color: #633b50;
-      overflow-x: hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    /* Floating hearts */
-    .heart {
-      position: fixed;
-      bottom: -30px;
-      font-size: 20px;
-      animation: floatUp 7s linear infinite;
-      opacity: 0.7;
-      z-index: 0;
-      pointer-events: none;
-    }
+<style>
 
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-      }
-      20% {
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    /* Hero */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-      position: relative;
-      z-index: 1;
-      background:
-        radial-gradient(circle at 20% 20%, #ffd6e8 0, transparent 25%),
-        radial-gradient(circle at 80% 70%, #e9d5ff 0, transparent 25%),
-        #fff0f6;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .hero-card {
-      max-width: 800px;
-    }
+body{
+  font-family:"Poppins",sans-serif;
+  background:#fff0f6;
+  color:#633b50;
+  overflow-x:hidden;
+}
 
-    .small {
-      font-size: 15px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #c8759d;
-      margin-bottom: 15px;
-    }
+/* Floating hearts */
 
-    h1 {
-      font-family: "DM Serif Display", serif;
-      font-size: clamp(60px, 13vw, 130px);
-      line-height: 0.9;
-      color: #b94e80;
-      text-shadow: 4px 5px 0 #ffd5e6;
-    }
+.heart{
+  position:fixed;
+  bottom:-40px;
+  z-index:0;
+  pointer-events:none;
+  opacity:.7;
+  animation:float 8s linear infinite;
+}
 
-    .subtitle {
-      margin-top: 25px;
-      font-size: 18px;
-      color: #80546b;
-    }
+@keyframes float{
+  0%{
+    transform:translateY(0) rotate(0);
+    opacity:0;
+  }
 
-    .cake {
-      font-size: 70px;
-      margin: 30px 0 10px;
-      animation: bounce 2s ease-in-out infinite;
-    }
+  15%{
+    opacity:.8;
+  }
 
-    @keyframes bounce {
-      50% {
-        transform: translateY(-12px);
-      }
-    }
+  100%{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
-      background: #c95b8c;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      box-shadow: 0 8px 20px rgba(180, 70, 120, 0.25);
-      transition: 0.3s;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 15px;
-    }
+/* HERO */
 
-    .button:hover {
-      transform: translateY(-4px) scale(1.03);
-      background: #b94e80;
-    }
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px 20px;
+  position:relative;
+  overflow:hidden;
 
-    /* Sections */
-    section {
-      position: relative;
-      z-index: 1;
-      padding: 90px 20px;
-    }
+  background:
+  radial-gradient(circle at 15% 20%,#ffd2e6 0,transparent 25%),
+  radial-gradient(circle at 85% 75%,#e5d4ff 0,transparent 28%),
+  linear-gradient(135deg,#fff0f6,#ffe7f0,#f7eaff);
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+}
 
-    .section-title {
-      font-family: "DM Serif Display", serif;
-      font-size: 48px;
-      color: #a84674;
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.crown{
+  font-size:48px;
+  animation:crown 2s ease-in-out infinite;
+}
 
-    /* Story */
-    .story-card {
-      background: rgba(255,255,255,0.75);
-      border: 1px solid #f4c9da;
-      border-radius: 30px;
-      padding: 40px;
-      box-shadow: 0 20px 50px rgba(155, 78, 115, 0.1);
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
+@keyframes crown{
+  50%{
+    transform:translateY(-8px) rotate(5deg);
+  }
+}
 
-    .instagram {
-      font-size: 60px;
-      margin-bottom: 20px;
-    }
+.small-title{
+  margin-top:10px;
+  margin-bottom:18px;
+  color:#c8759d;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  font-size:13px;
+}
 
-    .story-card p {
-      line-height: 1.9;
-      font-size: 16px;
-    }
+h1{
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(60px,14vw,140px);
+  line-height:.9;
+  color:#b94e80;
+  text-shadow:4px 5px #ffd4e5;
+}
 
-    .highlight {
-      color: #bd4e81;
-      font-weight: 600;
-    }
+.hero-subtitle{
+  max-width:680px;
+  margin:25px auto 0;
+  line-height:1.8;
+  font-size:18px;
+}
 
-    /* Biryani */
-    .biryani-section {
-      background: #fff8ef;
-    }
+.hero-cake{
+  font-size:75px;
+  margin:30px 0 5px;
+  animation:bounce 2s infinite;
+}
 
-    .biryani-card {
-      max-width: 700px;
-      margin: auto;
-      text-align: center;
-      background: #fff;
-      border-radius: 35px;
-      padding: 45px 30px;
-      box-shadow: 0 20px 50px rgba(150, 100, 60, 0.12);
-    }
+@keyframes bounce{
+  50%{
+    transform:translateY(-12px);
+  }
+}
 
-    .biryani {
-      font-size: 90px;
-      margin-bottom: 20px;
-    }
+/* BUTTONS */
 
-    .biryani-card h3 {
-      font-family: "DM Serif Display", serif;
-      font-size: 35px;
-      color: #9d5b35;
-      margin-bottom: 15px;
-    }
+.button{
+  border:none;
+  cursor:pointer;
+  color:white;
 
-    /* Letter */
-    .letter-section {
-      background: #fce7f1;
-    }
+  background:linear-gradient(135deg,#d45b93,#b94e80);
 
-    .letter {
-      max-width: 750px;
-      margin: auto;
-      background: #fffdf9;
-      padding: 55px 45px;
-      border-radius: 8px;
-      box-shadow: 0 20px 50px rgba(130, 70, 100, 0.12);
-      position: relative;
-    }
+  padding:14px 28px;
+  border-radius:50px;
 
-    .letter::before {
-      content: "♡";
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 35px;
-      color: #e79bbb;
-    }
+  font-family:"Poppins",sans-serif;
+  font-size:15px;
 
-    .letter h3 {
-      font-family: "DM Serif Display", serif;
-      font-size: 35px;
-      color: #a84674;
-      margin-bottom: 25px;
-    }
+  margin-top:25px;
 
-    .letter p {
-      line-height: 2;
-      margin-bottom: 18px;
-      font-size: 16px;
-    }
+  box-shadow:0 10px 25px rgba(185,78,128,.25);
 
-    .signature {
-      text-align: right;
-      font-family: "DM Serif Display", serif;
-      font-size: 25px;
-      color: #b94e80;
-      margin-top: 30px;
-    }
+  transition:.3s;
+}
 
-    /* Final */
-    .final {
-      text-align: center;
-      padding: 120px 20px;
-      background: #fff0f6;
-    }
+.button:hover{
+  transform:translateY(-4px) scale(1.03);
+}
 
-    .final h2 {
-      font-family: "DM Serif Display", serif;
-      font-size: clamp(45px, 8vw, 80px);
-      color: #b94e80;
-    }
+/* SECTIONS */
 
-    .final p {
-      margin-top: 20px;
-      font-size: 17px;
-    }
+section{
+  position:relative;
+  z-index:1;
+  padding:90px 20px;
+}
 
-    .footer {
-      text-align: center;
-      padding: 25px;
-      background: #f8d9e7;
-      color: #80546b;
-      font-size: 13px;
-    }
+.container{
+  max-width:950px;
+  width:100%;
+  margin:auto;
+}
 
-    /* Confetti */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      top: -20px;
-      z-index: 99;
-      pointer-events: none;
-      animation: fall 3s linear forwards;
-    }
+.section-title{
+  text-align:center;
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(40px,7vw,58px);
+  color:#a84674;
+  margin-bottom:45px;
+}
 
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
-      }
-    }
+/* STORY */
 
-    @media (max-width: 600px) {
-      .letter {
-        padding: 35px 25px;
-      }
+.story-section{
+  background:#fff5f9;
+}
 
-      .story-card {
-        padding: 30px 20px;
-      }
+.card{
+  max-width:800px;
+  margin:auto;
 
-      section {
-        padding: 70px 15px;
-      }
-    }
-  </style>
+  background:rgba(255,255,255,.85);
+
+  border:1px solid #f4c9da;
+  border-radius:35px;
+
+  padding:45px 30px;
+
+  text-align:center;
+
+  box-shadow:0 20px 50px rgba(150,70,110,.1);
+}
+
+.story-icon{
+  font-size:65px;
+  margin-bottom:20px;
+}
+
+.card p{
+  line-height:2;
+  margin-bottom:15px;
+}
+
+.highlight{
+  color:#bd4e81;
+  font-weight:600;
+}
+
+/* MADAM JI */
+
+.madam-section{
+  background:#f9efff;
+}
+
+.madam-card{
+  max-width:750px;
+  margin:auto;
+
+  text-align:center;
+
+  padding:45px 30px;
+
+  border-radius:35px;
+
+  background:linear-gradient(
+    135deg,
+    #fff,
+    #fff0f7
+  );
+
+  box-shadow:0 20px 50px rgba(150,70,110,.1);
+
+  border:1px solid #f0cce0;
+}
+
+.madam-card .emoji{
+  font-size:70px;
+}
+
+.madam-card h3{
+  font-family:"DM Serif Display",serif;
+  color:#a84674;
+  font-size:38px;
+  margin:15px 0;
+}
+
+.madam-card p{
+  line-height:1.9;
+}
+
+/* BIRYANI */
+
+.biryani-section{
+  background:#fff8ef;
+}
+
+.biryani-card{
+  max-width:750px;
+  margin:auto;
+
+  background:white;
+
+  text-align:center;
+
+  padding:50px 30px;
+
+  border-radius:35px;
+
+  box-shadow:0 20px 50px rgba(150,100,60,.12);
+}
+
+.biryani-icon{
+  font-size:90px;
+}
+
+.biryani-card h3{
+  font-family:"DM Serif Display",serif;
+  color:#9d5b35;
+  font-size:36px;
+  margin:15px 0;
+}
+
+.biryani-card p{
+  line-height:1.9;
+}
+
+/* CAKE */
+
+.cake-section{
+  background:linear-gradient(135deg,#fff0f7,#f7eaff);
+}
+
+.cake-box{
+  max-width:700px;
+  margin:auto;
+
+  text-align:center;
+
+  background:rgba(255,255,255,.85);
+
+  border-radius:35px;
+
+  padding:45px 25px;
+
+  box-shadow:0 20px 50px rgba(150,70,110,.1);
+}
+
+.cake{
+  display:inline-block;
+  font-size:120px;
+  transition:.6s;
+}
+
+.cake-box.cut .cake{
+  transform:scale(1.2) rotate(-8deg);
+}
+
+.cake-message{
+  min-height:40px;
+  margin-top:20px;
+  color:#b94e80;
+  font-weight:600;
+  line-height:1.8;
+}
+
+/* FUN */
+
+.fun-section{
+  background:#fff4fa;
+}
+
+.fun-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.fun-card{
+  background:rgba(255,255,255,.9);
+  border:1px solid #f4c9da;
+  border-radius:30px;
+  padding:35px 20px;
+  text-align:center;
+
+  box-shadow:0 15px 40px rgba(150,70,110,.08);
+
+  transition:.3s;
+}
+
+.fun-card:hover{
+  transform:translateY(-8px);
+}
+
+.fun-icon{
+  font-size:60px;
+}
+
+.fun-card h3{
+  font-family:"DM Serif Display",serif;
+  color:#a84674;
+  font-size:28px;
+  margin:12px 0;
+}
+
+.fun-card p{
+  min-height:70px;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.fun-button{
+  border:none;
+  cursor:pointer;
+
+  background:#c95b8c;
+  color:white;
+
+  padding:11px 20px;
+  border-radius:30px;
+
+  font-family:"Poppins",sans-serif;
+
+  transition:.3s;
+}
+
+.fun-button:hover{
+  transform:scale(1.05);
+}
+
+/* LETTER */
+
+.letter-section{
+  background:#fce7f1;
+}
+
+.letter{
+  max-width:780px;
+  margin:auto;
+
+  background:#fffdf9;
+
+  padding:55px 45px;
+
+  border-radius:12px;
+
+  box-shadow:0 20px 55px rgba(130,70,100,.12);
+
+  position:relative;
+}
+
+.letter:before{
+  content:"♡";
+
+  position:absolute;
+  right:25px;
+  top:15px;
+
+  font-size:40px;
+
+  color:#e79bbb;
+}
+
+.letter h3{
+  font-family:"DM Serif Display",serif;
+  font-size:38px;
+  color:#a84674;
+  margin-bottom:25px;
+}
+
+.letter p{
+  line-height:2;
+  margin-bottom:18px;
+}
+
+.signature{
+  text-align:right;
+  font-family:"DM Serif Display",serif;
+  font-size:25px;
+  color:#b94e80;
+  margin-top:30px;
+}
+
+/* FINAL */
+
+.final{
+  text-align:center;
+  padding:120px 20px;
+
+  background:
+  radial-gradient(circle,#ffdce9,#fff0f6);
+}
+
+.final h2{
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(45px,9vw,90px);
+  line-height:1;
+  color:#b94e80;
+}
+
+.final p{
+  margin-top:25px;
+  line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#f8d9e7;
+  color:#80546b;
+  font-size:13px;
+}
+
+/* CONFETTI */
+
+.confetti{
+  position:fixed;
+  top:-30px;
+  z-index:999;
+  pointer-events:none;
+
+  animation:fall 4s linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+/* FLOWERS */
+
+.flower{
+  position:fixed;
+  top:-50px;
+  z-index:998;
+  pointer-events:none;
+
+  animation:flowerFall 5s linear forwards;
+}
+
+@keyframes flowerFall{
+  0%{
+    transform:translateY(0) rotate(0);
+  }
+
+  100%{
+    transform:translateY(110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  section{
+    padding:70px 15px;
+  }
+
+  .fun-grid{
+    grid-template-columns:1fr;
+  }
+
+  .letter{
+    padding:40px 25px;
+  }
+
+  .cake{
+    font-size:90px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- Floating hearts -->
-  <div class="heart" style="left:8%; animation-delay:0s;">♡</div>
-  <div class="heart" style="left:20%; animation-delay:2s;">♥</div>
-  <div class="heart" style="left:35%; animation-delay:4s;">♡</div>
-  <div class="heart" style="left:55%; animation-delay:1s;">♥</div>
-  <div class="heart" style="left:72%; animation-delay:3s;">♡</div>
-  <div class="heart" style="left:90%; animation-delay:5s;">♥</div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-card">
+<!-- FLOATING HEARTS -->
 
-      <div class="small">A little birthday surprise for</div>
+<div class="heart" style="left:8%;animation-delay:0s;">♡</div>
+<div class="heart" style="left:22%;animation-delay:2s;">💗</div>
+<div class="heart" style="left:40%;animation-delay:4s;">♡</div>
+<div class="heart" style="left:60%;animation-delay:1s;">💕</div>
+<div class="heart" style="left:78%;animation-delay:3s;">🌸</div>
+<div class="heart" style="left:92%;animation-delay:5s;">💗</div>
 
-      <h1>Pihu</h1>
 
-      <div class="cake">🎂</div>
+<!-- HERO -->
 
-      <p class="subtitle">
-        Happy Birthday to the most pookie person ever! 🎀
-      </p>
+<header class="hero">
 
-      <button class="button" onclick="celebrate()">
-        Tap for a surprise 💗
-      </button>
+<div class="hero-content">
 
-    </div>
-  </header>
+<div class="crown">
+👑
+</div>
 
+<div class="small-title">
+Special Birthday Edition
+</div>
 
-  <!-- OUR STORY -->
-  <section>
-    <div class="container">
+<h1>
+Pihu Ji
+</h1>
 
-      <h2 class="section-title">How It All Started ✨</h2>
+<div class="hero-cake">
+🎂
+</div>
 
-      <div class="story-card">
+<p class="hero-subtitle">
 
-        <div class="instagram">📱💗</div>
+Happy Birthday to the cutest
+<strong>Madam Ji 💐</strong> ever! 💗
 
-        <p>
-          Who would've thought that a random
-          <span class="highlight">Instagram comment</span>
-          would introduce me to someone as amazing as you?
-        </p>
+<br><br>
 
-        <br>
+Aaj ka din officially
+<strong>Pihu Ji Appreciation Day</strong> hai. 🎀
 
-        <p>
-          One little comment turned into conversations,
-          conversations turned into memories,
-          and somehow an online stranger became my
-          <span class="highlight">pookie friend</span>. 🎀
-        </p>
+<br>
 
-        <br>
+Cake, flowers, smiles aur biryani —
+sab aapke naam! 🍛🌸
 
-        <p>
-          Honestly, Instagram deserves a tiny thank-you
-          for bringing us together. 🥹💞
-        </p>
+</p>
 
-      </div>
+<button class="button" onclick="celebrate()">
+Tap for a Surprise ✨
+</button>
 
-    </div>
-  </section>
+</div>
 
+</header>
 
-  <!-- BIRYANI -->
-  <section class="biryani-section">
 
-    <div class="container">
+<!-- STORY -->
 
-      <h2 class="section-title">Important Information 🍚</h2>
+<section class="story-section">
 
-      <div class="biryani-card">
+<div class="container">
 
-        <div class="biryani">🍛</div>
+<h2 class="section-title">
+How We Met ✨
+</h2>
 
-        <h3>Attention: Biryani Lover!</h3>
+<div class="card">
 
-        <p>
-          Since we all know that biryani has a very special
-          place in Pihu's heart...
-        </p>
+<div class="story-icon">
+📱💗
+</div>
 
-        <br>
+<p>
 
-        <p>
-          May your birthday be filled with happiness,
-          good vibes, amazing memories,
-          and an absolutely <strong>legendary plate of biryani.</strong> 😭🍚💗
-        </p>
+Kabhi socha bhi nahi tha ki ek random
 
-        <br>
+<span class="highlight">
+Instagram comment
+</span>
 
-        <p>
-          Because honestly, no birthday is complete
-          without biryani. 👀
-        </p>
+itni achhi friendship ka reason ban jayega.
 
-      </div>
+</p>
 
-    </div>
+<p>
 
-  </section>
+Ek comment se conversation start hui,
+conversation se memories bani,
+aur phir ek online stranger
+<strong>Madam Ji</strong> ban gayi. 😂💐
 
+</p>
 
-  <!-- LETTER -->
-  <section class="letter-section">
+<p>
 
-    <div class="container">
+Instagram ko iske liye ek chhota sa
+thank-you toh banta hai. 🥹💗
 
-      <h2 class="section-title">A Little Letter 💌</h2>
+</p>
 
-      <div class="letter">
+</div>
 
-        <h3>Dear Pihu,</h3>
+</div>
 
-        <p>
-          Happy Birthday, Pookie! 🎀
-        </p>
+</section>
 
-        <p>
-          It's honestly funny to think that we met through
-          something as random as an Instagram comment.
-          Out of all the people and all the comments,
-          somehow that tiny moment brought us together.
-        </p>
 
-        <p>
-          I'm really glad it did.
-        </p>
+<!-- MADAM JI -->
 
-        <p>
-          You've become such a lovely part of my online
-          world, and I hope you know how appreciated you are.
-          Even though we met online, the memories,
-          conversations, jokes and random moments we've
-          shared are genuinely special.
-        </p>
+<section class="madam-section">
 
-        <p>
-          On your birthday, I just hope life gives you
-          countless reasons to smile. I hope you get
-          everything you're wishing for, meet amazing people,
-          make beautiful memories and, obviously,
-          eat an unreasonable amount of biryani. 🍛😭
-        </p>
+<div class="container">
 
-        <p>
-          Never stop being your wonderfully chaotic,
-          sweet and pookie self. 💗
-        </p>
+<h2 class="section-title">
+Special Announcement 📢
+</h2>
 
-        <p>
-          Here's to another year of happiness,
-          laughter, random conversations and lots of
-          unforgettable moments.
-        </p>
+<div class="madam-card">
 
-        <p>
-          <strong>Happy Birthday once again, Pihu! 🎂🎀</strong>
-        </p>
+<div class="emoji">
+💐
+</div>
 
-        <div class="signature">
-          With lots of pookie energy ♡
-        </div>
+<h3>
+Madam Ji Alert! 👑
+</h3>
 
-      </div>
+<p>
 
-    </div>
+Attention please! 📢
 
-  </section>
+<br><br>
 
+Aaj hamari favourite
+<strong>Madam Ji</strong> ka birthday hai. 💐
 
-  <!-- FINAL -->
-  <section class="final">
+<br><br>
 
-    <h2>Happy Birthday, Pihu! 🎀</h2>
+Isliye aaj Madam Ji ko koi mana nahi karega,
+Madam Ji jo bolegi woh hoga. 😂
 
-    <p>
-      Stay happy. Stay cute. Stay pookie. 💗
-    </p>
+<br><br>
 
-    <button class="button" onclick="celebrate()">
-      More confetti! ✨
-    </button>
+Birthday Queen ko full respect,
+full flowers aur full celebration milega! 👑🎀
 
-  </section>
+</p>
 
+</div>
 
-  <footer class="footer">
-    Made with 💗 for Pihu • Birthday Edition 🎂
-  </footer>
+</div>
 
+</section>
 
-  <script>
 
-    function celebrate() {
+<!-- BIRYANI -->
 
-      const emojis = ["💗", "🎀", "✨", "💖", "🌸", "💕", "🎂"];
+<section class="biryani-section">
 
-      for (let i = 0; i < 70; i++) {
+<div class="container">
 
-        const confetti = document.createElement("div");
+<h2 class="section-title">
+One Very Important Thing 🍛
+</h2>
 
-        confetti.className = "confetti";
+<div class="biryani-card">
 
-        confetti.innerHTML =
-          emojis[Math.floor(Math.random() * emojis.length)];
+<div class="biryani-icon">
+🍛
+</div>
 
-        confetti.style.left =
-          Math.random() * 100 + "vw";
+<h3>
+Biryani Lover Detected!
+</h3>
 
-        confetti.style.fontSize =
-          (Math.random() * 15 + 10) + "px";
+<p>
 
-        confetti.style.animationDuration =
-          (Math.random() * 2 + 2) + "s";
+Madam Ji ke birthday par cake important hai...
 
-        document.body.appendChild(confetti);
+</p>
 
-        setTimeout(() => {
-          confetti.remove();
-        }, 4000);
-      }
+<p>
 
-    }
+<strong>
+BUT BIRYANI IS MORE IMPORTANT.
+</strong>
 
-  </script>
+😂🍛
+
+</p>
+
+<br>
+
+<p>
+
+May your life be as happy as
+finding extra chicken in your biryani. 😭💗
+
+</p>
+
+<br>
+
+<p>
+
+Birthday rule:
+
+<br>
+
+<strong>
+Cake bhi khana hai. Biryani bhi khani hai.
+No excuses! 👀🍛
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CAKE -->
+
+<section class="cake-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Cake Cutting Time 🎂
+</h2>
+
+<div class="cake-box" id="cakeBox">
+
+<div class="cake">
+🎂
+</div>
+
+<p class="cake-message" id="cakeMessage">
+
+Make a wish, Madam Ji! ✨
+
+</p>
+
+<button class="button" onclick="cutCake()">
+
+Cut the Cake 🎂🔪
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FUN VIBES -->
+
+<section class="fun-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Fun Vibes ✨
+</h2>
+
+<div class="fun-grid">
+
+
+<!-- FLOWERS -->
+
+<div class="fun-card">
+
+<div class="fun-icon">
+🌸
+</div>
+
+<h3>
+Flowers for Madam Ji
+</h3>
+
+<p>
+
+Because a normal birthday wish
+is not enough for our Madam Ji. 💐
+
+</p>
+
+<button class="fun-button"
+onclick="flowerShower()">
+
+Send Flowers 🌸
+
+</button>
+
+</div>
+
+
+<!-- COMPLIMENT -->
+
+<div class="fun-card">
+
+<div class="fun-icon">
+💗
+</div>
+
+<h3>
+Cutie Check
+</h3>
+
+<p id="compliment">
+
+Let's see what today's
+compliment is... 👀
+
+</p>
+
+<button class="fun-button"
+onclick="newCompliment()">
+
+Compliment Me 💕
+</button>
+
+</div>
+
+
+<!-- SURPRISE -->
+
+<div class="fun-card">
+
+<div class="fun-icon">
+🎁
+</div>
+
+<h3>
+Madam Ji's Gift
+</h3>
+
+<p id="surpriseText">
+
+There might be a surprise
+inside... 👀
+
+</p>
+
+<button class="fun-button"
+onclick="openSurprise()">
+
+Open Gift 🎁
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section class="letter-section">
+
+<div class="container">
+
+<h2 class="section-title">
+A Little Letter 💌
+</h2>
+
+<div class="letter">
+
+<h3>
+Dear Pihu Ji,
+</h3>
+
+<p>
+
+Happy Birthday, Madam Ji! 💐🎀
+
+</p>
+
+<p>
+
+It's actually funny to think that
+we met because of a random Instagram comment.
+
+Out of all the comments and all the people,
+somehow that one little comment brought us together.
+
+</p>
+
+<p>
+
+And honestly...
+
+I'm really glad it happened. 💗
+
+</p>
+
+<p>
+
+Even though we met online,
+the conversations, jokes, random talks
+and little memories we've shared
+are genuinely special.
+
+</p>
+
+<p>
+
+On your birthday, I hope you get
+everything that makes you happy.
+
+May this new year of your life bring
+you lots of smiles, amazing memories,
+good people and peaceful days. 🌸
+
+</p>
+
+<p>
+
+And obviously...
+
+May your biryani always have
+extra chicken. 🍛😂
+
+</p>
+
+<p>
+
+Never stop being the sweet,
+funny and adorable Cutie that you are.
+
+</p>
+
+<p>
+
+Aaj ke din bas ek baat yaad rakhna:
+
+<br>
+
+<strong>
+You deserve lots of happiness,
+lots of flowers and lots of love. 💐💗
+</strong>
+
+</p>
+
+<p>
+
+Happy Birthday once again,
+<strong>Pihu Ji — our favourite Madam Ji! 👑</strong>
+
+</p>
+
+<div class="signature">
+
+With lots of cutie energy ♡
+
+<br>
+
+💐🎀✨
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+<h2>
+
+Happy Birthday,
+
+<br>
+
+Pihu Ji! 💐
+
+</h2>
+
+<p>
+
+Stay happy.
+Stay cute.
+Stay amazing.
+
+<br>
+
+And always stay the same wonderful
+<strong>Madam Ji</strong>. 🎀
+
+<br><br>
+
+Now go enjoy your cake...
+
+<br>
+
+and BIRYANI! 🍛😂
+
+</p>
+
+<button class="button"
+onclick="celebrate()">
+
+More Confetti! 🎉
+
+</button>
+
+</section>
+
+
+<footer>
+
+Made specially for
+<strong>Pihu Ji 💐</strong>
+
+<br>
+
+Birthday Edition 🎂🎀🌸
+
+</footer>
+
+
+<script>
+
+
+/* CONFETTI */
+
+function celebrate(){
+
+const emojis=[
+"💗",
+"🎀",
+"✨",
+"💖",
+"🌸",
+"💕",
+"🎂",
+"🎉",
+"⭐",
+"💐"
+];
+
+for(let i=0;i<70;i++){
+
+const item=document.createElement("div");
+
+item.className="confetti";
+
+item.innerHTML=
+emojis[
+Math.floor(
+Math.random()*emojis.length
+)
+];
+
+item.style.left=
+Math.random()*100+"vw";
+
+item.style.fontSize=
+(Math.random()*15+10)+"px";
+
+item.style.animationDuration=
+(Math.random()*2+2)+"s";
+
+document.body.appendChild(item);
+
+setTimeout(()=>{
+item.remove();
+},4500);
+
+}
+
+}
+
+
+/* CAKE CUTTING */
+
+function cutCake(){
+
+const box=
+document.getElementById("cakeBox");
+
+const message=
+document.getElementById("cakeMessage");
+
+box.classList.add("cut");
+
+message.innerHTML=
+"🎉 YAYYY! Cake cut ho gaya, Madam Ji! 🎂💗"+
+"<br>"+
+"Ab biryani ki baari hai! 🍛😂";
+
+celebrate();
+
+}
+
+
+/* FLOWER SHOWER */
+
+function flowerShower(){
+
+const flowers=[
+"🌸",
+"🌷",
+"🌺",
+"🌼",
+"💐",
+"🌻"
+];
+
+for(let i=0;i<45;i++){
+
+const flower=
+document.createElement("div");
+
+flower.className="flower";
+
+flower.innerHTML=
+flowers[
+Math.floor(
+Math.random()*flowers.length
+)
+];
+
+flower.style.left=
+Math.random()*100+"vw";
+
+flower.style.fontSize=
+(Math.random()*18+18)+"px";
+
+flower.style.animationDuration=
+(Math.random()*2+3)+"s";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},5500);
+
+}
+
+}
+
+
+/* COMPLIMENTS */
+
+const compliments=[
+
+"Madam Ji is officially today's cutest person! 💐🎀",
+
+"Birthday Queen detected! 👑💗",
+
+"10/10 Cutie. No arguments allowed. 😌💗",
+
+"Instagram really did something good that day! 📱✨",
+
+"Pihu Ji deserves all the flowers today! 🌸",
+
+"Certified birthday Cutie! 🎀",
+
+"Madam Ji ka smile = instant happiness. 💗",
+
+"You're sweeter than birthday cake! 🎂",
+
+"Birthday girl deserves unlimited happiness! 💐",
+
+"And yes... you still owe us biryani! 🍛😂",
+
+"Today is officially Pihu Ji Appreciation Day! 💕",
+
+"Madam Ji, please accept this virtual flower bouquet. 💐🌸"
+
+];
+
+
+function newCompliment(){
+
+const random=
+Math.floor(
+Math.random()*compliments.length
+);
+
+document.getElementById(
+"compliment"
+).innerHTML=
+compliments[random];
+
+}
+
+
+/* SURPRISE */
+
+function openSurprise(){
+
+const surprise=
+document.getElementById(
+"surpriseText"
+);
+
+surprise.innerHTML=
+
+"🎉 SURPRISE! 🎉"+
+"<br><br>"+
+"Madam Ji, you're officially too amazing! 💗"+
+"<br>"+
+"Today you get unlimited smiles, flowers"+
+"<br>"+
+"and obviously BIRYANI! 🍛💐"+
+"<br><br>"+
+"Happy Birthday, Pihu Ji! 🎀";
+
+flowerShower();
+
+celebrate();
+
+}
+
+</script>
 
 </body>
-  </html>
+</html>
